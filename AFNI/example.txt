@@ -1,0 +1,21 @@
+View scripts
+These scripts can be run on standard local environments or high performance computing clusters. They cover the full fMRI processing pipeline from DICOM conversion to linear mixed effects modeling.
+
+s1.convert_DICOM.zsh
+This is an example of running dcm2niix_afni to convert raw DICOM files into NIfTI format and organize structural and functional data.
+zsh s1.convert_DICOM.zsh -s TMN* 
+
+s2_i.create_proc_M.zsh
+This script demonstrates how to construct a single subject afni_proc.py pipeline for the memory condition including EPI distortion correction and nonlinear standard space registration.
+
+M.proc.TMN01
+This is the generated execution script running the full preprocessing and noise regression steps for one subject to produce pure residual time series data.
+
+lme_freq_1.sh
+This is an example of running 3dLMEr to perform group level linear mixed effects analysis modeling the continuous frequency variable with random intercepts.
+
+lme_freq_2.sh
+This script runs a parallel 3dLMEr analysis using an alternative input data table structure for comparative evaluation.
+
+newDataTable_fin_SK.txt and newDataTable_fin_SK_2.txt
+These text files map each subject run and frequency level to its corresponding beta image for the 3dLMEr analysis.
