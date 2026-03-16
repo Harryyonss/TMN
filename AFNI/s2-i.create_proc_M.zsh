@@ -38,7 +38,7 @@ afni_proc.py	\
 	-dsets					$dsets			\
 	-radial_correlate_blocks tcat volreg    \
 	-tcat_remove_first_trs	0	\
-    -blip_forward_dset			"$dir_nifti/func.NM.r01.$subj.nii" \
+    -blip_forward_dset			"$dir_nifti/func.M.r01.$subj.nii" \
 	-blip_reverse_dset			"$dir_nifti/func.REV.$subj.nii" \
 	-tlrc_base				MNI152_2009_template_SSW.nii.gz	\
 	-tlrc_NL_warp	\
